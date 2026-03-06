@@ -1,0 +1,20 @@
+{
+  "ui": true,
+  "api_addr": "https://vault.example.com:8200",
+
+  "storage": {
+    "postgresql": {
+      "connection_url": "postgres://openbao:password@db:5432/openbao?sslmode=require"
+    }
+  },
+
+  "listener": [
+    {
+      "tcp": {
+        "address": "0.0.0.0:8200",
+        "tls_cert_file": "/etc/openbao/tls/server.crt",
+        "tls_key_file": "/etc/openbao/tls/server.key"
+      }
+    }
+  ]
+}
